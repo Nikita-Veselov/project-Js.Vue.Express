@@ -1,25 +1,25 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Main from '../views/main.vue';
-import Basket from '../views/basket.vue';
-import Catalog from '../views/catalog.vue';
+import Profile from '../views/profile.vue';
+import Login from '../views/login.vue';
 
 Vue.use(VueRouter)
   const routes = [
   {
     path: '/',
-    name: 'Index',
+    name: 'Main',
     component: Main
   },
   {
-    path: '/catalog',
-    name: 'Catalog',
-    component: Catalog
+    path: '/profile',
+    name: 'Profile',
+    component: Profile
   },
   {
-    path: '/basket',
-    name: 'Basket',
-    component: Basket
+    path: '/login',
+    name: 'Login',
+    component: Login
   }
 ]
 

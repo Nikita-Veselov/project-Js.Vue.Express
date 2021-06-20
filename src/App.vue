@@ -1,50 +1,27 @@
 <template>
-<div>
-  
-  <headerElement />
-  
-  <transition name="fade">
-  <div id="app">
-    <router-view />
-  </div>
-  </transition>
-  <footerElement />
+<div class="container-fluid min-vh-100 d-flex flex-column">
+
+    <headerComponent class="row px-5" />
+    
+    <router-view class="row justify-content-center flex-grow-1"/>
+     
+    <footerComponent class="row px-5 justify-content-center " />
 
 </div>
 </template>
 
 <script>
-import headerElement from './components/header.vue';
-import footerElement from './components/footer.vue';
+import headerComponent from './components/header.vue';
+import footerComponent from './components/footer.vue';
 
 export default {
-  components: {
-    headerElement,
-    footerElement
-  }
+    components: {
+        headerComponent,
+        footerComponent
+    }
 }
 </script>
 
-<style lang="scss">
-#app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-}
-
-#nav {
-    padding: 30px;
-
-    a {
-        font-weight: bold;
-        color: #2c3e50;
-
-        &.router-link-exact-active {
-            color: #f16d7f;
-        }
-    }
-}
+<style>
 
 </style>
